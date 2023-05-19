@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-6">
+            <div class="card">
+                <div class="card-header">
+                    Temperature Sensor
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Recent Recorded temperature is {{latestTemperatureValue}} °C</h5>
+                    <p class="card-text">Last updated at {{recentTemperatureTime}}</p>
+                    <a href="#" class="btn btn-primary" [routerLink]="['/details', 'temperature']">Get More Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-6">
+            <div class="card">
+                <div class="card-header">
+                    Humidity Sensor
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Recent Recorded humidity is {{latestHumidityValue}} %</h5>
+                    <p class="card-text">Last Updated at {{recentHumidityTime}}</p>
+                    <a href="#" class="btn btn-primary" [routerLink]="['/details', 'humidity']">Get More Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
